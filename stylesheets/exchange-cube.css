@@ -1,0 +1,191 @@
+
+.exchange-box{
+  height: 200px;
+  width: 200px;
+  perspective: 1000px;
+  position:relative;
+  transform: translate3d(0px,0px,0px);
+  z-index: 1;
+}
+
+.rotate1{
+  animation: rotate-box1 8s linear infinite;
+}
+
+.cube{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg) rotateX(20deg);
+}
+
+.wall{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url('../images/woodcrate.jpg');
+  border: 1px solid black;
+  transition: transform, .3s, translateZ;
+}
+
+.side-1{
+  transform: rotateY(0deg) translateZ(100px);
+	z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-2{
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.side-3{
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.side-4{
+  transform: rotateX(-90deg) translateZ(100px);
+  transition: transform 500ms;
+
+}
+
+.side-5{
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.side-6{
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+
+@keyframes cross-page{
+ 0%{ transform: translate3d(0px,0px,0px);}
+ 80%{transform: translate3d(752px,-180px,0px);
+	 top: 5px;}
+ 81%{transform: translate3d(752px,-180px,0px);
+	 top: -5px;}
+ 82%{transform: translate3d(752px,-180px,0px);
+	 top: 5px;}
+ 83%{transform: translate3d(752px,-180px,0px);
+	 top: -5px;}
+ 84%{transform: translate3d(752px,-180px,0px);
+	 top: 5px;}
+ 85%{transform: translate3d(752px,-180px,0px);
+	 top: -5px;}
+ 86%{transform: translate3d(752px,-180px,0px);
+	 top: 5px;}
+ 87%{transform: translate3d(752px,-180px,0px);
+	 top: -5px;}
+ 88%{transform: translate3d(752px,-180px,0px);
+	 top: 5px;}
+ 89%{transform: translate3d(752px,-180px,0px);
+	 top: -5px;}
+	90%{
+		transform: translate3d(752px,-180px,0px);
+		top: 5px;
+	}
+	91%{
+		transform: translate3d(752px,-180px,0px);
+		top: -5px;
+	}
+	92%{
+		transform: translate3d(752px,-180px,0px);
+		top: 5px;
+	}
+	93%{
+		transform: translate3d(752px,-180px,0px);
+		top: -5px;
+	}
+	94%{
+		transform: translate3d(752px,-180px,0px);
+		top: 5px;
+	}
+	95%{
+		transform: translate3d(752px,-180px,0px);
+		top: -5px;
+	}
+	96%{
+		transform: translate3d(752px,-180px,0px);
+		top: 5px;
+	}
+	97%{
+		transform: translate3d(752px,-180px,0px);
+		top: -5px;
+	}
+	98%{
+		transform: translate3d(752px,-180px,0px);
+		top: 5px;
+	}
+	99%{
+		transform: translate3d(752px,-180px,0px);
+		top: -5px;
+	}
+	100%{
+		transform: translate3d(752px,-180px,0px);
+		top: 5px;
+	}
+}
+
+.move-to-europe{
+   animation: cross-page 2s linear forwards;
+}
+
+.drop{
+	animation: dropping 1s linear forwards;
+}
+
+@keyframes dropping{
+  0% {
+    transform: translateY(-30px) scalex(1);
+    animation-timing-function: cubic-bezier(.66,.0,1,.72);
+  }
+  45% {
+    transform: translateY(390px) scalex(1);
+  }
+  50% {
+    transform: translateY(400px) scalex(1);
+  }
+  70% {
+    transform: translateY(330px) scalex(1);
+  }
+  80% {
+    transform: translateY(390px) scalex(1);
+  }
+  85% {
+    transform: translateY(400px) scalex(1);
+  }
+  93% {
+    transform: translateY(370px) scalex(1);
+  }
+  100% {
+    transform: translateY(400px) scalex(1);
+  }
+}
+
+.backToUSA{
+	animation: reset 1s linear forwards;
+}
+
+@keyframs reset{
+	0%{
+		transform: translate3d(752px,-180px,0px);
+	}
+	100%{
+		transform: translate3d(0px,-180px,0px);
+	}
+}
+
+
+.box-label{
+  border: 2px solid #b50b0b;
+  transform: rotate(-45deg);
+  color: red;
+  text-align: center;
+  font-family: Arial,sans-serif;
+  width: 153px;
+  font-size: 35px;
+  color: #c00;
+  text-shadow: 0 0 2px #c00;
+}
