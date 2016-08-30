@@ -1,4 +1,4 @@
-body {
+body{
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -90,11 +90,11 @@ input:focus{
   transition: width 400ms;
 }
 
-.underline-button:hover .shrink{
-  width: 0%
+.underline-button:hover > .shrink{
+  width: 0%;
 }
-.underline-button:hover .grow{
-  width: 100%
+.underline-button:hover > .grow{
+  width: 100%;
 }
 
 .underline-button:active {
