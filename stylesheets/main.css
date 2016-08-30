@@ -21,6 +21,13 @@ body{
 }
 .error{
   margin-top: 20px;
+	font-size: 15px;
+	font-weight: 400;
+	margin-top: 20px;
+	background: white;
+	padding: 6px;
+	opacity: 0.89;
+	border-radius: 10px;
 }
 
 #dollar-input:before{
