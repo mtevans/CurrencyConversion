@@ -344,7 +344,8 @@
   height: 10px;
   color: black;
   text-shadow: 1px 1px white;
-  transition: top 950ms, transform 2s;
+  -webkit-transition: top 950ms, transform 2s;
+  -moz-transition: top 950ms, transform 2s;
 }
 
 
@@ -356,9 +357,11 @@
 }
 
 .bow{
-  transition: transform 2s;
+  -webkit-transition: transform 2s;
+  -moz-transition: transform 2s;
 }
 
 .rotate-90{
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
 }
