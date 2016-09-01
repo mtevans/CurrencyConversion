@@ -2,14 +2,12 @@
   width: 200px;
   height: 160px;
   position: relative;
-  cursor: pointer;
 }
-.bow-and-arrow:hover path{
-  fill: #cc0031;
-}
+
 .bow-and-arrow path {
   fill: #000;
 }
+
 .bow-and-arrow .arrow {
   position: absolute;
   top: 0;
@@ -31,11 +29,11 @@
 }
 .bow-and-arrow .bow .string:first-of-type {
   left: 0;
-  -webkit-transform: rotateZ(10deg);
-  -moz-transform: rotateZ(10deg);
-  -ms-transform: rotateZ(10deg);
-  -o-transform: rotateZ(10deg);
-  transform: rotateZ(10deg);
+  -webkit-transform: rotateZ(0deg);
+  -moz-transform: rotateZ(0deg);
+  -ms-transform: rotateZ(0deg);
+  -o-transform: rotateZ(0deg);
+  transform: rotateZ(0deg);
   -webkit-transform-origin: 0 0;
   -moz-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
@@ -44,49 +42,18 @@
 }
 .bow-and-arrow .bow .string:last-of-type {
   right: 0;
-  -webkit-transform: rotateZ(-10deg);
-  -moz-transform: rotateZ(-10deg);
-  -ms-transform: rotateZ(-10deg);
-  -o-transform: rotateZ(-10deg);
-  transform: rotateZ(-10deg);
+  -webkit-transform: rotateZ(0deg);
+  -moz-transform: rotateZ(0deg);
+  -ms-transform: rotateZ(0deg);
+  -o-transform: rotateZ(0deg);
+  transform: rotateZ(0deg);
   -webkit-transform-origin: 100% 100%;
   -moz-transform-origin: 100% 100%;
   -ms-transform-origin: 100% 100%;
   -o-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
 }
-.bow-and-arrow:not(:active) .string:first-of-type {
-  -webkit-animation: vibrate-left 0.5s linear 0s;
-  -moz-animation: vibrate-left 0.5s linear 0s;
-  animation: vibrate-left 0.5s linear 0s;
-}
-.bow-and-arrow:not(:active) .string:last-of-type {
-  -webkit-animation: vibrate-right 0.5s linear 0s;
-  -moz-animation: vibrate-right 0.5s linear 0s;
-  animation: vibrate-right 0.5s linear 0s;
-}
-.bow-and-arrow:not(:active) .arrow {
-  -webkit-animation: flyaway 0.5s linear 0s;
-  -moz-animation: flyaway 0.5s linear 0s;
-  animation: flyaway 0.5s linear 0s;
-}
-.bow-and-arrow:not(:active):hover .arrow {
-  top: 15%;
-}
-.bow-and-arrow:not(:active):hover .bow .string:first-of-type {
-  -webkit-transform: rotateZ(24deg);
-  -moz-transform: rotateZ(24deg);
-  -ms-transform: rotateZ(24deg);
-  -o-transform: rotateZ(24deg);
-  transform: rotateZ(24deg);
-}
-.bow-and-arrow:not(:active):hover .bow .string:last-of-type {
-  -webkit-transform: rotateZ(-24deg);
-  -moz-transform: rotateZ(-24deg);
-  -ms-transform: rotateZ(-24deg);
-  -o-transform: rotateZ(-24deg);
-  transform: rotateZ(-24deg);
-}
+
 
 @keyframes vibrate-left {
   0% {
@@ -306,8 +273,8 @@
 
 .container {
   position: relative;
-  top: -91px;
-  height: 100%;
+  top: -69px;
+  height: 47px;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -320,10 +287,9 @@
   box-align: center;
   -webkit-align-items: center;
   -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
   align-items: center;
   -ms-flex-align: center;
+
 }
 
 .bow-and-arrow {
@@ -338,30 +304,49 @@
 
 .USD{
   position: relative;
-  left: 72px;
-  top: 480px;
-  width: 50px;
-  height: 10px;
-  color: black;
-  text-shadow: 1px 1px white;
-  -webkit-transition: top 950ms, transform 2s;
-  -moz-transition: top 950ms, transform 2s;
+  left: 30px;
+  top: 320px;
+  width: 100px;
+  font-size: 20px;
+  height: 20px;
+  color: white;
+  opacity: 0;
+  background: rgba(0,0,0,0.6);
+  -webkit-transition: top 750ms, transform 600ms;
+  -moz-transition: top 750ms, transform 600ms;
 }
 
 
+.vibrate-left{
+  -webkit-animation: vibrate-left 1500ms linear forwards;
+  -moz-animation: vibrate-left 1500ms linear forwards;
+}
+
+.vibrate-right{
+    -webkit-animation: vibrate-right 1500ms linear forwards;
+    -moz-animation: vibrate-right 1500ms linear forwards;
+}
 
 .euros{
   position: relative;
-  left: 67px;
+  left: -9px;
   top: 52px;
+  text-align: center;
 }
 
 .bow{
-  -webkit-transition: transform 2s;
-  -moz-transition: transform 2s;
+  -webkit-transition: transform 600ms;
+  -moz-transition: transform 600ms;
 }
 
 .rotate-90{
   -webkit-transform: rotate(-90deg);
+  transform-origin: 50% 50%;
   -moz-transform: rotate(-90deg);
+}
+
+.reset90{
+  -webkit-transform: rotate(0deg);
+  transform-origin: 50% 50%;
+  -moz-transform: rotate(0deg);
 }
